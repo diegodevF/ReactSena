@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'JetBrains Mono';
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.PrincipalButton{
+  transition: 0.5s;
+}
+.PrincipalButton:hover{
+  background-color: #183D3D;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+.BackButton{
+  transition: 0.5s;
+}
+.BackButton::after{
+  content: '<-';
+}
+
+.BackButton:hover{
+  transform: scale(1.1);
+  background-color: #c9c9c9;
+  color: rgb(255, 255, 255);
+}
+
+.ActionButton{
+  transition: 0.5s;
+}
+
+.ActionButton:hover{
+  transform: scale(1.1);
+  background: #5C8374;
+  transition: 0.5s;
+}
+
