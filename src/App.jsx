@@ -1,11 +1,15 @@
 import "./App.css";
-import BackButton from "./components/BackButton";
+import "@fontsource-variable/outfit";
+import { Routes, Route } from "react-router-dom";
+import Interface from "./routes/Interface";
+import Login from "./routes/Login";
 
 function App() {
   return (
-    <>
-      <BackButton></BackButton>
-    </>
+    <Routes>
+      <Route path="/" Component={Interface}></Route>
+      <Route path="/Login" Component={Login}></Route>
+    </Routes>
   );
 }
 
