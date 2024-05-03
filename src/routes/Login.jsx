@@ -1,5 +1,5 @@
 import Form from "../components/Form";
-import Init from "../Icons/Init";
+import Init from "../Icons/Icon01";
 
 const Login = () => {
   // const Users = [
@@ -12,7 +12,7 @@ const Login = () => {
       <div className="w-full flex items-center justify-center lg:w-1/2 bg-gradient-to-b from-[#93B1A6] via-[#5C8374] to-[#183D3D] border-transparent">
       <Form></Form>
       </div>
-      <div className="hidden relative lg:flex h-full w-1/2 items-center justify-center ">
+      <div className="`hidden relative lg:flex h-full w-1/2 items-center justify-center ">
         <Init></Init>
       </div>
     </div>
