@@ -1,6 +1,8 @@
+import ForgotForm from "../components/ForgotForm";
+
 const ForgotPass = () => {
     return(
-        <div></div>
+        <ForgotForm></ForgotForm>
     )
 }
 export default ForgotPass;

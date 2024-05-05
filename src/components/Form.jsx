@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Google from "../Icons/Google"
 
 const Form = () => { 
@@ -19,7 +20,7 @@ const Form = () => {
                         <input type="checkbox" name="" id="remember" />
                         <label htmlFor="remember" className="ml-2 font-medium text-base">Recordar Siempre</label>
                     </div>
-                    <button className="font-medium text-base text-[#5C8374]">Olvidaste tu Contraseña?</button>
+                    <Link to="/ForgotPass" className="font-medium text-base text-[#5C8374]">Olvidaste tu Contraseña?</Link>
                 </div>
                 <div className="mt-8 flex flex-col gap-y-4">
                     <button className="active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01] ease-in-out py-3 rounded-xl bg-[#5C8374] text-white text-lg font-bold">Log in</button>
