@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const FormSingUp = () => {
     return(
         <div className=" bg-white px-20 py-20 rounded-3xl border-2 border-gray-100 bg-[url('../assets/step_background.png')]">
-            <h1 className="text-5xl font-semibold ">Welcome Back!</h1>
-            <p className="font-medium text-lg text-gray-500 mt-4">Please enter your details.</p>
+            <h1 className="text-5xl font-semibold ">Eres nuevo aqui?</h1>
+            <p className="font-medium text-lg text-gray-500 mt-4">Ingresa tu Info.</p>
             <div className="mt-8 ">
                 <div>
                     <label className="flex text-lg font-semibold ">Nombre</label>
