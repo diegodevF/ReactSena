@@ -5,6 +5,8 @@ import Interface from "./routes/Interface";
 import Login from "./routes/Login";
 import SingIn from "./routes/SingIn";
 import ForgotPass from "./routes/ForgotPass";
+import Dashboard from "./routes/Dashboard";
+import PageNotFound from "./routes/PageNotFound";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Route path="/Login" Component={Login}></Route>
       <Route path="/SingIn" Component={SingIn}></Route>
       <Route path="/ForgotPass" Component={ForgotPass}></Route>
+      <Route path="/Dashboard" Component={Dashboard} ></Route>
+      <Route path="/*" Component={PageNotFound}></Route>
     </Routes>
   );
 }
