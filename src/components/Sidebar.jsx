@@ -16,10 +16,10 @@ import {
 const Sidebar = () => {
   return (
     <div className="h-screen flex">
-      <Card className="h-full w-full sm:max-w-[16rem] md:max-w-[20rem] p-4 shadow-xl shadow-[#183D3D]/50 rounded-none relative flex flex-col bg-[#040D12] text-[#93B1A6]">
-        <div className="mb-2 flex items-center gap-4 p-4 bg-[#183D3D] rounded-md">
+      <Card className="h-full w-full sm:max-w-[16rem] md:max-w-[22rem] p-4 shadow-xl shadow-[#183D3D]/50 rounded-none relative flex flex-col bg-[#183D3D] text-[#93B1A6]">
+        <div className="mb-2 flex items-center gap-4 p-4 bg-[#93B1A6] rounded-md">
           <img src="https://docs.material-tailwind.com/img/logo-ct-dark.png" alt="brand" className="h-8 w-8" />
-          <Typography variant="h5" color="#93B1A6">
+          <Typography variant="h5" color="#040D12" className="text-[#040D12]">
             SysMoney
           </Typography>
         </div>
