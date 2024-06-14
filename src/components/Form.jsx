@@ -17,7 +17,7 @@ const Form = () => {
     }
 
     // Simulación de autenticación básica
-    if (email === "usuario@example.com" && password === "password") {
+    if (email === "diegoh3105@gmail.com" && password === "admin") {
       setIsLoggedIn(true);
       setError("");
       // Redirige al usuario a la página de dashboard después de iniciar sesión
