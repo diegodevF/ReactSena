@@ -9,7 +9,6 @@ const Form = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-
   const handleLogin = () => {
     if (!email || !password) {
       setError("Por favor ingresa tu email y contraseña.");
@@ -21,23 +20,20 @@ const Form = () => {
       setIsLoggedIn(true);
       setError("");
       // Redirige al usuario a la página de dashboard después de iniciar sesión
-      // Utilizamos useHistory para la redirección
       navigate("/Dashboard"); // Cambia "/dashboard" por la ruta a la que quieres redirigir
     } else {
-      setError(
-        "Email o contraseña incorrectos. Por favor intenta de nuevo."
-      );
+      setError("Email o contraseña incorrectos. Por favor intenta de nuevo.");
     }
 
-    if(!isLoggedIn){
-        return navigate("../routes/Dashboard")
+    if (!isLoggedIn) {
+      return navigate("../routes/Dashboard");
     }
   };
 
   return (
-    <div className="bg-white px-20 py-20 rounded-3xl border-2 border-gray-100 bg-[url('../assets/step_background.png')]">
-      <h1 className="text-5xl font-semibold">Bienvenido de Nuevo!</h1>
-      <p className="font-medium text-lg text-gray-500 mt-4">
+    <div className="bg-white px-8 py-12 md:px-20 md:py-20 rounded-3xl border-2 border-gray-100 bg-[url('../assets/step_background.png')]">
+      <h1 className="text-3xl md:text-5xl font-semibold">Bienvenido de Nuevo!</h1>
+      <p className="font-medium text-base md:text-lg text-gray-500 mt-4">
         Ingresa tus Credenciales.
       </p>
       <div className="mt-8">
@@ -46,7 +42,7 @@ const Form = () => {
           <input
             type="text"
             className="w-full border-2 border-gray-100 rounded-xl mt-1 bg-transparent p-3"
-            placeholder="Enter your Email"
+            placeholder="Ingresa tu Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -56,7 +52,7 @@ const Form = () => {
           <input
             type="password"
             className="w-full border-2 border-gray-100 rounded-xl mt-1 bg-transparent p-3"
-            placeholder="Enter your Password"
+            placeholder="Ingresa tu Contraseña"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
@@ -69,10 +65,7 @@ const Form = () => {
               Recordar Siempre
             </label>
           </div>
-          <Link
-            to="/ForgotPass"
-            className="font-medium text-base text-[#5C8374]"
-          >
+          <Link to="/ForgotPass" className="font-medium text-base text-[#5C8374]">
             Olvidaste tu Contraseña?
           </Link>
         </div>

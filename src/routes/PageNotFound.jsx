@@ -1,4 +1,5 @@
 import { Typography, Button } from '@material-tailwind/react';
+import { Link } from "react-router-dom";
 
 const PageNotFound = () => {
   return (
@@ -21,12 +22,13 @@ const PageNotFound = () => {
         <Typography color="white" className="mt-2 text-sm sm:text-xs md:text-base lg:text-lg">
           Sorry, the page you are looking for does not exist.
         </Typography>
+        <Link to={"/"}>
         <Button
           className="mt-6 p-7 rounded-md bg-[#183D3D] hover:bg-[#5C8374] text-[white] py-2 px-4 sm:py-1 sm:px-3 md:py-2 md:px-4 lg:py-3 lg:px-5"
-          onClick={() => window.location.href = '/'}
         >
           Go Home
         </Button>
+        </Link>
       </div>
     </div>
   );

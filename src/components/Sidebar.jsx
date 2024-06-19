@@ -12,6 +12,7 @@ import {
   Cog6ToothIcon,
   PowerIcon,
 } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
@@ -25,28 +26,28 @@ const Sidebar = () => {
         </div>
         <List className="flex-1 overflow-auto">
           <ListItem className="hover:bg-[#5C8374] rounded-md">
-            <ListItemPrefix>
+            <ListItemPrefix >
               <PresentationChartBarIcon className="h-5 w-5 text-[#93B1A6]" />
             </ListItemPrefix>
-            Dashboard
+            <Link className="ml-2" to={"/Dashboard"}>Dashboard</Link>
           </ListItem>
           <ListItem className="hover:bg-[#5C8374] rounded-md">
             <ListItemPrefix>
               <ShoppingBagIcon className="h-5 w-5 text-[#93B1A6]" />
             </ListItemPrefix>
-            E-Commerce
+            <Link className="ml-2" to={"/GoalPanel"}>Meta Financiera</Link>
           </ListItem>
           <ListItem className="hover:bg-[#5C8374] rounded-md">
             <ListItemPrefix>
               <UserCircleIcon className="h-5 w-5 text-[#93B1A6]" />
             </ListItemPrefix>
-            Profile
+            <p className="ml-2">Ingresos o </p>
           </ListItem>
           <ListItem className="hover:bg-[#5C8374] rounded-md">
             <ListItemPrefix>
               <Cog6ToothIcon className="h-5 w-5 text-[#93B1A6]" />
             </ListItemPrefix>
-            Settings
+            <p className="ml-2">Settings</p>
           </ListItem>
         </List>
         <div className="mt-auto">
@@ -54,7 +55,7 @@ const Sidebar = () => {
             <ListItemPrefix>
               <PowerIcon className="h-5 w-5 text-[#93B1A6]" />
             </ListItemPrefix>
-            Log Out
+            <p className="ml-2">Log Out</p>
           </ListItem>
         </div>
       </Card>

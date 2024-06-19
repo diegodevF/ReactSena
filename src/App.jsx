@@ -6,6 +6,7 @@ import Login from "./routes/Login";
 import SingIn from "./routes/SingIn";
 import ForgotPass from "./routes/ForgotPass";
 import Dashboard from "./routes/Dashboard";
+import GoalPanel from "./routes/GoalPanel"
 import PageNotFound from "./routes/PageNotFound";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/SingIn" Component={SingIn}></Route>
       <Route path="/ForgotPass" Component={ForgotPass}></Route>
       <Route path="/Dashboard" Component={Dashboard} ></Route>
+      <Route path="/GoalPanel" Component={GoalPanel}></Route>
       <Route path="/*" Component={PageNotFound}></Route>
     </Routes>
   );

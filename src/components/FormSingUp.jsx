@@ -8,15 +8,19 @@ const FormSingUp = () => {
             <div className="mt-8 ">
                 <div>
                     <label className="flex text-lg font-semibold ">Nombre</label>
-                    <input type="password" className="w-full border-2 border-gray-100 rounded-xl mt-1 bg-transparent p-3" placeholder="Ingrese su Nombre" />
+                    <input type="password" className="w-full border-2 border-gray-100 rounded-xl mt-1 bg-transparent p-3" placeholder="Ingrese tu Nombre" />
                 </div>
                 <div>
                     <label className="flex text-lg font-semibold">Email</label>
-                    <input type="text" className="w-full border-2 border-gray-100 rounded-xl mt-1 bg-transparent p-3" placeholder="Ingrese su Email" />
+                    <input type="text" className="w-full border-2 border-gray-100 rounded-xl mt-1 bg-transparent p-3" placeholder="Ingrese tu Email" />
                 </div>
                 <div>
                     <label className="flex text-lg font-semibold ">Contraseña</label>
-                    <input type="password" className="w-full border-2 border-gray-100 rounded-xl mt-1 bg-transparent p-3" placeholder="Ingrese su Contraseña" />
+                    <input type="password" className="w-full border-2 border-gray-100 rounded-xl mt-1 bg-transparent p-3" placeholder="Ingrese tu Contraseña" />
+                </div>
+                <div>
+                    <label className="flex text-lg font-semibold ">Contraseña</label>
+                    <input type="password" className="w-full border-2 border-gray-100 rounded-xl mt-1 bg-transparent p-3" placeholder="Confirmar tu Contraseña" />
                 </div>
                 <div className="mt-8 flex flex-col gap-y-4">
                     <button className="active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01] ease-in-out py-3 rounded-xl bg-[#5C8374] text-white text-lg font-bold">Registrarse</button>
