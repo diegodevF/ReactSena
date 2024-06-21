@@ -29,19 +29,19 @@ const Sidebar = () => {
             <ListItemPrefix >
               <PresentationChartBarIcon className="h-5 w-5 text-[#93B1A6]" />
             </ListItemPrefix>
-            <Link className="ml-2" to={"/Dashboard"}>Dashboard</Link>
+            <Link className="ml-2 p-1" to={"/Dashboard"}>Dashboard</Link>
           </ListItem>
           <ListItem className="hover:bg-[#5C8374] rounded-md">
             <ListItemPrefix>
               <ShoppingBagIcon className="h-5 w-5 text-[#93B1A6]" />
             </ListItemPrefix>
-            <Link className="ml-2" to={"/GoalPanel"}>Meta Financiera</Link>
+            <Link className="ml-2 p-1" to={"/GoalPanel"}>Meta Financiera</Link>
           </ListItem>
           <ListItem className="hover:bg-[#5C8374] rounded-md">
             <ListItemPrefix>
               <UserCircleIcon className="h-5 w-5 text-[#93B1A6]" />
             </ListItemPrefix>
-            <p className="ml-2">Ingresos o </p>
+            <Link className="ml-2 p-1" to={"/AddTransaction"}>Finanzas</Link>
           </ListItem>
           <ListItem className="hover:bg-[#5C8374] rounded-md">
             <ListItemPrefix>

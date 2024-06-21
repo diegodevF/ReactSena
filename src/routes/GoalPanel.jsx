@@ -1,7 +1,7 @@
 import Sidebar from '../components/Sidebar';
 import { useState } from 'react';
 
-const AddGoalForm = () => {
+const GoalPanel = () => {
   const [goalName, setGoalName] = useState('');
   const [goalAmount, setGoalAmount] = useState('');
   const [startDate, setStartDate] = useState('');
@@ -27,11 +27,11 @@ const AddGoalForm = () => {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen bg-[#D9D9D9]">
       <Sidebar />
 
-      <div className="flex-1 p-6 bg-gradient-to-r from-[#93B1A6] via-[#5C8374] to-[#183D3D]">
-        <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-xl">
+      <div className="flex-1 flex items-center justify-center p-6">
+        <div className="w-full max-w-2xl mx-auto bg-white p-8 lg:p-10 rounded-lg shadow-xl">
           <h2 className="text-2xl font-semibold text-[#183D3D] mb-6">Agregar Meta Financiera</h2>
           <form onSubmit={handleAddGoal}>
             <div className="mb-4">
@@ -99,4 +99,4 @@ const AddGoalForm = () => {
   );
 };
 
-export default AddGoalForm;
+export default GoalPanel;
