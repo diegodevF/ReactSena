@@ -1,5 +1,7 @@
-import Sidebar from '../components/Sidebar';
+// GoalPanel.js
 import { useState } from 'react';
+import Sidebar from '../components/Sidebar';
+import GoalItems from '../components/GoalItems'; // Ajusta la ruta según tu estructura de archivos
 
 const GoalPanel = () => {
   const [goalName, setGoalName] = useState('');
@@ -7,18 +9,19 @@ const GoalPanel = () => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [important, setImportant] = useState(false);
+  const [goals, setGoals] = useState([]);
 
   const handleAddGoal = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar la lógica para enviar los datos a la API o realizar otra acción
-    console.log({
-      goalName,
-      goalAmount,
-      startDate,
-      endDate,
-      important,
-    });
-    // Reinicia los campos después de agregar la meta
+    const newGoal = {
+      name: goalName,
+      amount: goalAmount,
+      startDate: startDate,
+      endDate: endDate,
+      important: important,
+      progress: 0 // Asume que la meta comienza con un progreso del 0%
+    };
+    setGoals([...goals, newGoal]);
     setGoalName('');
     setGoalAmount('');
     setStartDate('');
@@ -26,14 +29,20 @@ const GoalPanel = () => {
     setImportant(false);
   };
 
+  const handleDeleteGoal = (index) => {
+    const newGoals = goals.filter((goal, i) => i !== index);
+    setGoals(newGoals);
+  };
+
   return (
     <div className="flex h-screen bg-[#D9D9D9]">
       <Sidebar />
 
-      <div className="flex-1 flex items-center justify-center p-6">
-        <div className="w-full max-w-2xl mx-auto bg-white p-8 lg:p-10 rounded-lg shadow-xl">
+      <div className="flex-1 flex flex-col lg:flex-row p-6 space-y-6 lg:space-y-0 lg:space-x-6">
+        {/* Columna del formulario para agregar metas */}
+        <div className="w-full lg:w-1/2 max-w-md mx-auto lg:mx-0 lg:max-w-2xl bg-white p-8 lg:p-10 rounded-lg shadow-xl mb-6 lg:mb-0">
           <h2 className="text-2xl font-semibold text-[#183D3D] mb-6">Agregar Meta Financiera</h2>
-          <form onSubmit={handleAddGoal}>
+          <form onSubmit={handleAddGoal} className="space-y-4">
             <div className="mb-4">
               <label className="block text-lg font-semibold text-[#183D3D] mb-1">Nombre de la Meta</label>
               <input
@@ -93,6 +102,22 @@ const GoalPanel = () => {
               Agregar Meta
             </button>
           </form>
+        </div>
+
+        {/* Columna de la lista de metas agregadas */}
+        <div className="w-full lg:w-1/2 max-w-md mx-auto lg:mx-0 lg:max-w-2xl bg-white p-8 lg:p-10 rounded-lg shadow-xl">
+          <h2 className="text-2xl font-semibold text-[#183D3D] mb-6">Metas Financieras</h2>
+          {goals.length === 0 ? (
+            <p className="text-lg text-gray-600">No hay metas agregadas.</p>
+          ) : (
+            goals.map((goal, index) => (
+              <GoalItems
+                key={index}
+                goal={goal}
+                onDelete={() => handleDeleteGoal(index)}
+              />
+            ))
+          )}
         </div>
       </div>
     </div>

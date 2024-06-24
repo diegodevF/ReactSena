@@ -9,6 +9,7 @@ import Dashboard from "./routes/Dashboard";
 import GoalPanel from "./routes/GoalPanel"
 import PageNotFound from "./routes/PageNotFound";
 import AddTransaction from "./routes/AddTransaction";
+import GenerateReport from "./routes/GenerateReport"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/Dashboard" Component={Dashboard} ></Route>
       <Route path="/GoalPanel" Component={GoalPanel}></Route>
       <Route path="/AddTransaction" Component={AddTransaction}></Route>
+      <Route path="/GenerateReport" Component={GenerateReport}></Route>
       <Route path="/*" Component={PageNotFound}></Route>
     </Routes>
   );

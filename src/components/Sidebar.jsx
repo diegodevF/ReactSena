@@ -11,6 +11,7 @@ import {
   UserCircleIcon,
   Cog6ToothIcon,
   PowerIcon,
+  DocumentIcon
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 
@@ -42,6 +43,12 @@ const Sidebar = () => {
               <UserCircleIcon className="h-5 w-5 text-[#93B1A6]" />
             </ListItemPrefix>
             <Link className="ml-2 p-1" to={"/AddTransaction"}>Finanzas</Link>
+          </ListItem>
+          <ListItem className="hover:bg-[#5C8374] rounded-md">
+            <ListItemPrefix>
+              <DocumentIcon className="h-5 w-5 text-[#93B1A6]" />
+            </ListItemPrefix>
+            <Link className="ml-2" to={"/GenerateReport"}>Reporte Financiero</Link>
           </ListItem>
           <ListItem className="hover:bg-[#5C8374] rounded-md">
             <ListItemPrefix>
