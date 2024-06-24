@@ -9,9 +9,9 @@ import {
   PresentationChartBarIcon,
   ShoppingBagIcon,
   UserCircleIcon,
-  Cog6ToothIcon,
   PowerIcon,
-  DocumentIcon
+  DocumentIcon,
+  UserIcon
 } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 
@@ -52,9 +52,9 @@ const Sidebar = () => {
           </ListItem>
           <ListItem className="hover:bg-[#5C8374] rounded-md">
             <ListItemPrefix>
-              <Cog6ToothIcon className="h-5 w-5 text-[#93B1A6]" />
+              <UserIcon className="h-5 w-5 text-[#93B1A6]" />
             </ListItemPrefix>
-            <p className="ml-2">Settings</p>
+            <Link className="ml-2" to={"/ProfilePanel"}>Perfil</Link>
           </ListItem>
         </List>
         <div className="mt-auto">

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Sidebar from '../components/Sidebar';
 import GoalItems from '../components/GoalItems'; // Ajusta la ruta según tu estructura de archivos
 
+
 const GoalPanel = () => {
   const [goalName, setGoalName] = useState('');
   const [goalAmount, setGoalAmount] = useState('');
